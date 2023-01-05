@@ -21,9 +21,7 @@ class FuelApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Poppins'),
       title: 'Fuel App',
       home: const productScreen(),
-      routes: {
-        '/selectNearestShed': (context) => const SearchNearestShed(),
-      },
+
       //home: SelectVehicle(),
 
       // home: const LogInScreen(),
