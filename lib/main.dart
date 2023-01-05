@@ -22,7 +22,7 @@ class FuelApp extends StatelessWidget {
       title: 'Fuel App',
       home: const productScreen(),
       routes: {
-        '/selectNearestShed': (context) => SearchNearestShed(),
+        '/selectNearestShed': (context) => const SearchNearestShed(),
       },
       //home: SelectVehicle(),
 
