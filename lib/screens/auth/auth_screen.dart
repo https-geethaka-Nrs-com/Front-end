@@ -118,7 +118,10 @@ class _AuthScreenState extends State<AuthScreen> {
           height: 20,
         ),
         SubmitButton(
-          onPressed: () => loginController.loginWithEmail(),
+          // onPressed: () => loginController.loginWithEmail(),
+          onPressed: (() {
+            Navigator.pushNamed(context, '/fuelStateUpdate');
+          }),
           title: 'Login',
         )
       ],
