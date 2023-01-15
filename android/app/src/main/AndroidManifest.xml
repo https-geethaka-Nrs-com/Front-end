@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+
     package="com.example.fuel_app">
    <application
         android:label="fuel_app"
