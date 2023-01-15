@@ -115,8 +115,8 @@ class _BodyState extends State<Body> {
         ),
       ),
       backgroundColor: kPrimaryColor,
-      body: SingleChildScrollView(
-        child: Center(
+      body: Center(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               const SizedBox(
@@ -168,7 +168,6 @@ class _BodyState extends State<Body> {
               const SizedBox(
                 height: 8,
               ),
-
               FutureBuilder<List<Album>>(
                 future: fetchAlbum(),
                 builder: (context, snapshot) {
@@ -177,12 +176,26 @@ class _BodyState extends State<Body> {
                       shrinkWrap: true,
                       itemCount: snapshot.data!.length,
                       itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text(snapshot.data![index].dealer.toString()),
-                          trailing: Text(
-                              snapshot.data![index].petrolStatus.toString()),
-                          subtitle: Text(
-                              snapshot.data![index].dieselStatus.toString()),
+                        return Card(
+                          shadowColor: Colors.white,
+                          color: Colors.tealAccent,
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 20),
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: ListTile(
+                            title: Text(
+                              snapshot.data![index].dealer.toString(),
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            trailing: Text(
+                                snapshot.data![index].petrolStatus.toString()),
+                            subtitle: Text(
+                                snapshot.data![index].dieselStatus.toString()),
+                          ),
                         );
                       },
                     );
@@ -192,31 +205,6 @@ class _BodyState extends State<Body> {
                   return const CircularProgressIndicator();
                 },
               ),
-
-              // SearchBox(
-              //   onChanged: (value) {},
-              // ),
-
-              //const CategoryList(),
-
-              // const SizedBox(height: 1),
-              // Expanded(
-              //     child: Stack(
-              //   children: [
-              //     Container(
-              //       margin: const EdgeInsets.only(top: 100),
-              //       decoration: const BoxDecoration(
-              //           color: Colors.white,
-              //           borderRadius: BorderRadius.only(
-              //               topLeft: Radius.circular(40),
-              //               topRight: Radius.circular(40))),
-              //     ),
-              //     ListView.builder(
-              //       itemCount: 3,
-              //       itemBuilder: ((context, index) => const ProductCard()),
-              //     )
-              //   ],
-              // )),
             ],
           ),
         ),
