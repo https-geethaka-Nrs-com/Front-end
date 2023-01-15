@@ -44,8 +44,8 @@ class FuelApp extends StatelessWidget {
         // home: NavBar(),
         // home: SearchNearestShed(),
         //home: const LogInScreen(),
-        home: Body(),
-        // home: LandingPage(),
+        // home: Body(),
+        home: LandingPage(),
         routes: {
           '/registerPage': (context) => AuthScreen(),
           '/selectNearestShed': (context) => SearchNearestShed(),
