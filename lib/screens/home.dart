@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             child: Text(
               'logout',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white54),
             ))
       ]),
       body: Center(
